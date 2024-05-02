@@ -1,3 +1,5 @@
 # njofredev.github.io
 
-Hola mundo!
+web dedicada a mi portafolio personal.
+
+Creada con Html, css y Js.
