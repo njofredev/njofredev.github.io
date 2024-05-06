@@ -1,101 +1,115 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Portafolio</title>
-  <!-- Enlace a Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="/assets/css/styles.css">
-</head>
-<body>
-  <header>
-    <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Mi Portafolio</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#proyectos">Proyectos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contacto">Contacto</a>
-          </li>
-        </ul>
+<html>
+  <head>
+    <title>Portafolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+      /* Estilos personalizados */
+      .hero {
+        background-image: url('hero-image.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      }
+      
+      .project-card {
+        margin-bottom: 30px;
+      }
+      
+      .contact-form {
+        background-color: #f8f9fa;
+        padding: 30px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sección del héroe -->
+    <div class="hero">
+      <div class="container text-center">
+        <h1>Bienvenido a mi Portafolio</h1>
+        <p>Descubre mis proyectos y habilidades</p>
       </div>
-    </nav>
-  </header>
-  
-  <main>
-    <!-- Sección de inicio -->
-    <section id="inicio" class="py-5 text-center">
-      <div class="container">
-        <h1 class="display-4">¡Bienvenido a mi Portafolio!</h1>
-        <p class="lead">Aquí encontrarás información sobre mis proyectos y habilidades.</p>
-      </div>
-    </section>
+    </div>
     
     <!-- Sección de proyectos -->
-    <section id="proyectos" class="py-5">
-      <div class="container">
-        <h2 class="mb-4">Mis Proyectos</h2>
-        <!-- Aquí puedes agregar tus proyectos utilizando las clases de Bootstrap -->
-        <div class="row">
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="proyecto1.jpg" class="card-img-top" alt="Proyecto 1">
-              <div class="card-body">
-                <h5 class="card-title">Proyecto 1</h5>
-                <p class="card-text">Descripción del proyecto.</p>
-                <a href="#" class="btn btn-primary">Ver más</a>
-              </div>
+    <div class="container my-5">
+      <h2>Mis Proyectos</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="project-card">
+            <img src="project1.jpg" class="card-img-top" alt="Proyecto 1">
+            <div class="card-body">
+              <h5 class="card-title">Proyecto 1</h5>
+              <p class="card-text">Descripción del Proyecto 1</p>
+              <a href="#" class="btn btn-primary">Ver Proyecto</a>
             </div>
           </div>
-          <!-- Agrega más proyectos aquí -->
+        </div>
+        <div class="col-md-4">
+          <div class="project-card">
+            <img src="project2.jpg" class="card-img-top" alt="Proyecto 2">
+            <div class="card-body">
+              <h5 class="card-title">Proyecto 2</h5>
+              <p class="card-text">Descripción del Proyecto 2</p>
+              <a href="#" class="btn btn-primary">Ver Proyecto</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="project-card">
+            <img src="project3.jpg" class="card-img-top" alt="Proyecto 3">
+            <div class="card-body">
+              <h5 class="card-title">Proyecto 3</h5>
+              <p class="card-text">Descripción del Proyecto 3</p>
+              <a href="#" class="btn btn-primary">Ver Proyecto</a>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
     
     <!-- Sección de contacto -->
-    <section id="contacto" class="bg-dark text-white py-5">
-      <div class="container">
-        <h2 class="mb-4">Contáctame</h2>
-        <p>¿Interesado en trabajar juntos? ¡Contáctame!</p>
-        <form>
-          <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input type="text" class="form-control" id="nombre" placeholder="Nombre completo">
-          </div>
-          <div class="form-group">
-            <label for="email">Correo electrónico</label>
-            <input type="email" class="form-control" id="email" placeholder="correo@example.com">
-          </div>
-          <div class="form-group">
-            <label for="mensaje">Mensaje</label>
-            <textarea class="form-control" id="mensaje" rows="3"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-        </form>
+    <div class="container my-5">
+      <h2>Contáctame</h2>
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre">
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
+            </div>
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea class="form-control" id="message" rows="3" placeholder="Escribe tu mensaje"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
       </div>
-    </section>
-  </main>
-  
-  <footer class="py-4 bg-light text-center">
-    <div class="container">
-      <span>&copy; 2024 Mi Portafolio</span>
     </div>
-  </footer>
-
-  <!-- Enlace a Bootstrap JS y jQuery (necesario para algunas funcionalidades de Bootstrap) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+    
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white py-3">
+      <div class="container text-center">
+        <p>&copy; 2023 Portafolio. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    
+    <!-- Scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
 </html>
