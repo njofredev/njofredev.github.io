@@ -22,6 +22,9 @@ border-radius: 5px;
 
 */
 
+html {
+    scroll-behavior: smooth;
+}
 
 
 /*Estilos hero y cards*/
