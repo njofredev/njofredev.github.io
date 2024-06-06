@@ -38,3 +38,5 @@ $(document).ready(function () {
     window.open($(this).attr('href'), '_blank');
   });
 });
+
+// Botones

@@ -14,37 +14,58 @@
   </head>
   <body>
     <div>
-      <header
-        class="d-flex justify-content-center py-3 fixed-top"
-        data-bs-theme="dark"
-      >
-        <ul class="nav nav-pills">
-          <li class="nav-item">
-            <a href="#seccioninicio" class="nav-link">Inicio</a>
-          </li>
-          <li class="nav-item"><a href="#" class="nav-link">Sobre mí</a></li>
-          <li class="nav-item">
-            <a href="#seccionproyectos" class="nav-link">Proyectos</a>
-          </li>
-          <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-        </ul>
+      <header class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
+        <div class="container-fluid">
+          <!-- Logotipo -->
+          <a class="navbar-brand mx-3" href="https://njofredev.github.io/"
+            >Mi Sitio</a
+          >
+          <!-- Botón de alternancia para dispositivos pequeños -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Menú de navegación -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#seccioninicio">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sobre mí</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#seccionproyectos">Proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </header>
     </div>
     <!-- Sección del héroe -->
     <div class="container col-xxl-8 px-4 py-5" id="seccioninicio">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <div class="col-10 col-sm-8 col-lg-6">
+        <div class="col-12 col-lg-6">
           <img
             src="assets/img/perfil.jpeg"
-            class="d-block mx-lg-auto img-fluid rounded-pill shadow-sm"
-            alt="Imagen de perfíl"
+            class="d-block mx-auto img-fluid rounded-pill shadow-sm"
+            alt="Imagen de perfil"
             width="350"
             height="350"
             loading="lazy"
           />
         </div>
-        <div class="col-lg-6">
+        <div class="col-12 col-lg-6">
           <h1 class="display-5 fw-bold lh-1 mb-3 text-white">
             Nicolás Jofré Andrade
           </h1>
@@ -53,7 +74,7 @@
             <span class="text-primary text-success">Django</span>
           </p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-5">
-            <a
+            <button
               id="githubBtn"
               class="btn btn-secondary"
               href="https://github.com/njofredev"
@@ -72,8 +93,8 @@
                 ></path>
               </svg>
               Github
-            </a>
-            <a
+            </button>
+            <button
               id="linkedinBtn"
               class="btn btn-info"
               href="https://www.linkedin.com/in/njofreandrade/"
@@ -92,8 +113,8 @@
                 ></path>
               </svg>
               Linkedin
-            </a>
-            <a
+            </button>
+            <button
               id="cvBtn"
               class="btn btn-success"
               href="https://drive.google.com/file/d/1aO-Y510_SKQGCLfL3ffkqtcqrAK32cvh/view?usp=sharing"
@@ -113,7 +134,7 @@
                 ></path>
               </svg>
               Cv
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -121,9 +142,9 @@
 
     <!-- Cards de proyectos web -->
     <div class="container" id="seccionproyectos">
-      <div class="row">
+      <div class="row justify-content-center">
         <div class="col-md-6">
-          <div class="card">
+          <div class="card" id="cardcirdep">
             <img
               src="assets/img/cirdep.jpg"
               class="card-img-top"
@@ -141,7 +162,7 @@
           </div>
         </div>
         <div class="col-md-6">
-          <div class="card">
+          <div class="card" id="cardaguila">
             <img
               src="assets/img/aguila.jpg"
               class="card-img-top"
@@ -160,6 +181,7 @@
         </div>
       </div>
     </div>
+
     <!-- Pie de página -->
     <footer class="bg-dark text-white py-3">
       <div class="container text-center">
