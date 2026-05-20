@@ -1,74 +1,68 @@
 import React, { FC } from "react";
 import Link from "next/link";
-import { headerData } from "../Header/Navigation/menuData";
 import { footerlabels } from "@/app/api/data";
-import Image from "next/image";
 import { Icon } from "@iconify/react";
 import Logo from "../Header/Logo";
 
 const Footer: FC = () => {
   return (
-    <footer className="pt-16 bg-darkmode">
+    <footer className="pt-20 pb-12 bg-darkmode border-t border-dark_border border-opacity-5">
       <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-12 lg:gap-20 md:gap-6 sm:gap-12 gap-6  pb-16">
-          <div className="lg:col-span-4 md:col-span-6 col-span-6">
+        <div className="grid grid-cols-1 sm:grid-cols-12 lg:gap-20 md:gap-6 sm:gap-12 gap-12 pb-12">
+          
+          <div className="lg:col-span-4 md:col-span-6 col-span-12">
             <Logo />
-            <div className="flex gap-6 items-center mt-8">
-              <Link href="#" className="group">
+            <p className="text-muted text-opacity-70 text-15 mt-6 leading-relaxed max-w-sm">
+              Ingeniero de Ejecución en Informática enfocado en crear infraestructuras seguras, flujos automatizados de alta eficiencia e integraciones a la medida.
+            </p>
+            <div className="flex gap-4 items-center mt-6">
+              <a
+                href="https://github.com/njofredev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-dark_grey bg-opacity-40 p-3 rounded-full border border-dark_border border-opacity-10 hover:border-primary transition-all duration-300"
+              >
                 <Icon
-                  icon="fa6-brands:facebook-f"
-                  width="24"
-                  height="24"
-                  className="text-white group-hover:text-primary"
+                  icon="fa6-brands:github"
+                  width="20"
+                  height="20"
+                  className="text-white group-hover:text-primary transition-colors duration-300"
                 />
-              </Link>
-              <Link href="#" className="group">
+              </a>
+              <a
+                href="mailto:n.jofreandrade@gmail.com"
+                className="group bg-dark_grey bg-opacity-40 p-3 rounded-full border border-dark_border border-opacity-10 hover:border-primary transition-all duration-300"
+              >
                 <Icon
-                  icon="fa6-brands:instagram"
-                  width="24"
-                  height="24"
-                  className="text-white group-hover:text-primary"
+                  icon="tabler:mail"
+                  width="20"
+                  height="20"
+                  className="text-white group-hover:text-primary transition-colors duration-300"
                 />
-              </Link>
-              <Link href="#" className="group">
+              </a>
+              <a
+                href="/scrap/jofrenicolascurriculum2026.pdf"
+                download="CV_Nicolas_Jofre.pdf"
+                className="group bg-dark_grey bg-opacity-40 p-3 rounded-full border border-dark_border border-opacity-10 hover:border-primary transition-all duration-300"
+              >
                 <Icon
-                  icon="fa6-brands:x-twitter"
-                  width="24"
-                  height="24"
-                  className="text-white group-hover:text-primary"
+                  icon="tabler:download"
+                  width="20"
+                  height="20"
+                  className="text-white group-hover:text-primary transition-colors duration-300"
                 />
-              </Link>
+              </a>
             </div>
-            <h3 className="text-white text-24 font-medium sm:mt-20 mt-12">
-              2025 Copright | Crypgo
-            </h3>
-            <h3 className="text-white text-24 font-medium sm:mt-20 mt-12">
-              Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-            </h3>
           </div>
-          <div className="lg:col-span-2 md:col-span-3 col-span-6">
-            <h4 className="text-white mb-4 font-medium text-24">Links</h4>
-            <ul>
-              {headerData.map((item, index) => (
-                <li key={index} className="pb-4">
-                  <Link
-                    href={item.href}
-                    className="text-white hover:text-primary text-17"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="lg:col-span-2 md:col-span-3 col-span-6">
-            <h4 className="text-white mb-4 font-medium text-24">Information</h4>
-            <ul>
+          
+          <div className="lg:col-span-3 md:col-span-3 col-span-6">
+            <h4 className="text-white mb-6 font-bold text-20 uppercase tracking-wider">Enlaces Rápidos</h4>
+            <ul className="space-y-4">
               {footerlabels.map((item, index) => (
-                <li key={index} className="pb-4">
+                <li key={index}>
                   <Link
                     href={item.herf}
-                    className="text-white hover:text-primary text-17"
+                    className="text-muted text-opacity-70 hover:text-primary transition-colors duration-300 text-16"
                   >
                     {item.label}
                   </Link>
@@ -76,28 +70,36 @@ const Footer: FC = () => {
               ))}
             </ul>
           </div>
-          <div className="lg:col-span-4 md:col-span-4 col-span-6">
-            <h3 className="text-white text-24 font-medium">Subscribe</h3>
-            <p className="text-muted text-opacity-60 text-18 mt-5">
-              Subscribe to get the latest
-              <br /> news form us
-            </p>
-            <div className="relative lg:w-80%">
-              <input
-                type="email"
-                name="mail"
-                id="mail"
-                placeholder="Enter Email"
-                className="bg-transparent border border-dark_border border-opacity-60 py-4 text-white rounded-lg w-full mt-6 px-6"
-              />
-              <Icon
-                icon="tabler:send"
-                width="24"
-                height="24"
-                className="text-primary absolute right-7 bottom-4"
-              />
-            </div>
+          
+          <div className="lg:col-span-5 md:col-span-3 col-span-12">
+            <h4 className="text-white mb-6 font-bold text-20 uppercase tracking-wider">Contacto Directo</h4>
+            <ul className="space-y-4 text-16 text-muted text-opacity-70 font-mono">
+              <li className="flex items-center gap-3">
+                <Icon icon="tabler:phone" className="text-primary text-22 shrink-0" />
+                <span>+569 5755 8966</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Icon icon="tabler:mail" className="text-primary text-22 shrink-0" />
+                <a href="mailto:n.jofreandrade@gmail.com" className="hover:text-primary hover:underline transition-colors duration-300">
+                  n.jofreandrade@gmail.com
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Icon icon="tabler:map-pin" className="text-primary text-22 shrink-0" />
+                <span>Conchalí, Santiago, Chile</span>
+              </li>
+            </ul>
           </div>
+          
+        </div>
+        
+        <div className="border-t border-dark_border border-opacity-5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-14 text-muted text-opacity-40 font-mono">
+          <p>
+            © {new Date().getFullYear()} njofre.dev. Todos los derechos reservados.
+          </p>
+          <p>
+            Desarrollado con Next.js, TailwindCSS y Framer Motion.
+          </p>
         </div>
       </div>
     </footer>

@@ -1,26 +1,16 @@
 import React from "react";
-import Hero from "@/components/Home/Hero";
-import Work from "@/components/Home/work";
-import TimeLine from "@/components/Home/timeline";
-import Platform from "@/components/Home/platform";
-import Portfolio from "@/components/Home/portfolio";
-import Upgrade from "@/components/Home/upgrade";
-import Perks from "@/components/Home/perks";
+import BentoGrid from "@/components/Home/BentoGrid";
 import { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: "CrypGo",
+  title: "Nicolás Jofré | Ingeniero en Informática & Administrador de TI",
+  description: "Portafolio profesional de Nicolás Jofré Andrade. Especialista en desarrollo backend con Python/Django, bases de datos PostgreSQL en GCP, administración de TI, redes e IA.",
 };
 
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <Work />
-      <TimeLine />
-      <Platform />
-      <Portfolio />
-      <Upgrade />
-      <Perks />
+      <BentoGrid />
     </main>
   );
 }

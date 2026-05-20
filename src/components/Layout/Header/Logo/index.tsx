@@ -4,15 +4,10 @@ import Link from "next/link";
 
 const Logo: React.FC = () => {
   return (
-    <Link href="/">
-      <Image
-        src={`${getImagePrefix()}images/logo/logo.svg`}
-        alt="logo"
-        width={160}
-        height={50}
-        style={{ width: "auto", height: "auto" }}
-        quality={100}
-      />
+    <Link href="/" className="flex items-center gap-1 group">
+      <span className="font-bold text-22 md:text-26 text-midnight_text dark:text-white tracking-tight">
+        njofre<span className="text-primary group-hover:scale-125 inline-block transition-transform duration-300">.</span>dev
+      </span>
     </Link>
   );
 };

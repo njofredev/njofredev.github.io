@@ -1,172 +1,129 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import BuyCrypto from "./buy-form";
-import SellCrypto from "./sell-form";
 import CardSlider from "./slider";
-import { useEffect, useRef, useState, useCallback } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { getImagePrefix } from "@/utils/utils";
 
 const Hero = () => {
-  const [isBuying, setIsBuyingOpen] = useState(false);
-  const [isSelling, setIsSellingOpen] = useState(false);
-  const BuyRef = useRef<HTMLDivElement>(null);
-  const SellRef = useRef<HTMLDivElement>(null);
-
-  const handleClickOutside = useCallback(
-    (event: MouseEvent) => {
-      if (BuyRef.current && !BuyRef.current.contains(event.target as Node)) {
-        setIsBuyingOpen(false);
-      }
-      if (SellRef.current && !SellRef.current.contains(event.target as Node)) {
-        setIsSellingOpen(false);
-      }
-    },
-    [BuyRef, SellRef]
-  );
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [handleClickOutside]);
-
-  useEffect(() => {
-    document.body.style.overflow = isBuying || isSelling ? "hidden" : "";
-  }, [isBuying, isSelling]);
-
   const leftAnimation = {
-    initial: { x: "-100%", opacity: 0 },
+    initial: { x: "-50%", opacity: 0 },
     animate: { x: 0, opacity: 1 },
-    exit: { x: "-100%", opacity: 0 },
-    transition: { duration: 0.6 },
+    transition: { duration: 0.8 },
   };
 
   const rightAnimation = {
-    initial: { x: "100%", opacity: 0 },
+    initial: { x: "50%", opacity: 0 },
     animate: { x: 0, opacity: 1 },
-    exit: { x: "100%", opacity: 0 },
-    transition: { duration: 0.6 },
+    transition: { duration: 0.8 },
   };
 
   return (
     <section
-      className="relative md:pt-40 md:pb-28 py-20 overflow-hidden z-1"
+      className="relative md:pt-44 md:pb-24 py-20 overflow-hidden z-1"
       id="main-banner"
     >
       <div className="container mx-auto lg:max-w-screen-xl px-4">
-        <div className="grid grid-cols-12">
-          <motion.div {...leftAnimation} className="lg:col-span-5 col-span-12">
-            <div className="flex gap-6 items-center lg:justify-start justify-center mb-5 mt-24">
-              <Image
-                src= {`${getImagePrefix()}images/icons/icon-bag.svg`}
-                alt="icon"
-                width={40}
-                height={40}
-              />
-              <p className="text-white sm:text-28 text-18 mb-0">
-                Crypto On The <span className="text-primary">Go</span>
+        <div className="grid grid-cols-12 items-center min-h-[550px] gap-8">
+          <motion.div {...leftAnimation} className="lg:col-span-6 col-span-12">
+            <div className="flex gap-3 items-center lg:justify-start justify-center mb-6 mt-12 md:mt-20">
+              <div className="bg-primary bg-opacity-20 p-2 rounded-lg">
+                <Icon icon="tabler:terminal-2" className="text-primary text-28" />
+              </div>
+              <p className="text-charcoalGray dark:text-white sm:text-24 text-18 mb-0 font-medium">
+                Hola, soy <span className="text-primary">Nicolás Jofré</span>
               </p>
             </div>
-            <h1 className="font-medium lg:text-76 md:text-70 text-54 lg:text-start text-center text-white mb-10">
-              Buy and Sell <span className="text-primary">Crypto</span> of your{" "}
-              <span className="text-primary">choice</span>!
+            
+            <h1 className="font-bold lg:text-54 md:text-44 text-36 lg:text-start text-center text-midnight_text dark:text-white mb-6 leading-tight">
+              Ingeniero en Informática <br />
+              <span className="text-primary">&amp; Administrador de TI</span>
             </h1>
-            <div className="flex items-center md:justify-start justify-center gap-8">
-              <button
-                className="bg-primary border border-primary rounded-lg text-21 font-medium hover:bg-transparent hover:text-primary text-darkmode py-2 px-7 z-50"
-                onClick={() => setIsBuyingOpen(true)}
+            
+            <p className="text-charcoalGray dark:text-muted dark:text-opacity-80 text-18 mb-10 lg:text-start text-center leading-relaxed">
+              Especialista en infraestructura tecnológica, administración de sistemas clínicos, redes, automatización de procesos e integración inteligente con Python y Google Cloud. Comprometido con la innovación y optimización del rendimiento en entornos de salud y educación.
+            </p>
+
+            <div className="flex flex-wrap items-center lg:justify-start justify-center gap-6">
+              <Link
+                href="/#work"
+                className="bg-primary border border-primary rounded-lg text-18 font-semibold hover:bg-transparent hover:text-primary text-darkmode py-3 px-8 transition-all duration-300 shadow-lg shadow-primary/10"
               >
-                Buy Crypto
-              </button>
-              <button
-                className="bg-transparent border border-primary rounded-lg text-21 font-medium hover:bg-primary hover:text-darkmode text-primary py-2 px-7"
-                onClick={() => setIsSellingOpen(true)}
+                Ver Especialidades
+              </Link>
+              <a
+                href="mailto:n.jofreandrade@gmail.com"
+                className="bg-transparent border border-primary rounded-lg text-18 font-semibold hover:bg-primary hover:text-darkmode text-primary py-3 px-8 transition-all duration-300"
               >
-                Sell Crypto
-              </button>
+                Contactar
+              </a>
             </div>
-            <div className="flex items-center md:justify-start justify-center gap-12 mt-20">
-              <Link href="#" className="hover:scale-110 duration-300">
-                <Image
-                  src={`${getImagePrefix()}images/hero/playstore.png`}
-                  alt="Play Store"
-                  width={240}
-                  height={70}
-                />
-              </Link>
-              <Link href="#" className="hover:scale-110 duration-300">
-                <Image
-                  src= {`${getImagePrefix()}images/hero/applestore.png`}
-                  alt="App Store"
-                  width={240}
-                  height={70}
-                />
-              </Link>
+
+            <div className="flex items-center lg:justify-start justify-center gap-6 mt-12">
+              <a
+                href="https://github.com/njofredev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 bg-white dark:bg-dark_grey bg-opacity-100 dark:bg-opacity-50 hover:bg-primary hover:text-darkmode dark:hover:text-darkmode text-midnight_text dark:text-white border border-border dark:border-dark_border dark:border-opacity-10 py-3 px-6 rounded-lg transition-all duration-300 shadow-sm dark:shadow-none"
+              >
+                <Icon icon="fa6-brands:github" className="text-24" />
+                <span className="font-medium text-16">GitHub</span>
+              </a>
+              <a
+                href="mailto:n.jofreandrade@gmail.com"
+                className="flex items-center gap-3 bg-white dark:bg-dark_grey bg-opacity-100 dark:bg-opacity-50 hover:bg-primary hover:text-darkmode dark:hover:text-darkmode text-midnight_text dark:text-white border border-border dark:border-dark_border dark:border-opacity-10 py-3 px-6 rounded-lg transition-all duration-300 shadow-sm dark:shadow-none"
+              >
+                <Icon icon="tabler:mail" className="text-24" />
+                <span className="font-medium text-16">n.jofreandrade@gmail.com</span>
+              </a>
             </div>
           </motion.div>
+
           <motion.div
             {...rightAnimation}
-            className="col-span-7 lg:block hidden"
+            className="lg:col-span-6 col-span-12 lg:block hidden"
           >
-            <div className="ml-20 -mr-64">
-              <Image
-                src= {`${getImagePrefix()}images/hero/banner-image.png`}
-                alt="Banner"
-                width={1150}
-                height={1150}
-              />
+            <div className="ml-12 relative">
+              <div className="bg-dark_grey bg-opacity-55 backdrop-blur-lg border border-dark_border border-opacity-10 rounded-2xl p-8 shadow-2xl relative overflow-hidden text-left font-mono text-15 text-white/90">
+                <div className="flex gap-2 mb-6 border-b border-dark_border border-opacity-10 pb-4">
+                  <span className="w-3.5 h-3.5 bg-[#FF5F56] rounded-full block"></span>
+                  <span className="w-3.5 h-3.5 bg-[#FFBD2E] rounded-full block"></span>
+                  <span className="w-3.5 h-3.5 bg-[#27C93F] rounded-full block"></span>
+                  <span className="text-muted text-opacity-40 text-12 ml-4">nicolas_jofre_profile.json</span>
+                </div>
+                
+                <p className="text-[#7FDBCA] mb-2">// Ingeniero de Ejecución en Informática</p>
+                <p className="text-white"><span className="text-[#C792EA]">const</span> <span className="text-[#82B1FF]">developer</span> = &#123;</p>
+                <p className="text-white pl-6">nombre: <span className="text-[#ECC48D]">"Nicolás Jofré Andrade"</span>,</p>
+                <p className="text-white pl-6">experiencia: <span className="text-[#ECC48D]">"Encargado de TI @ Policlínico Tabancura"</span>,</p>
+                <p className="text-white pl-6">enfoque: <span className="text-[#ECC48D]">"Automatización &amp; Infraestructura"</span>,</p>
+                <p className="text-white pl-6">habilidadesClave: [</p>
+                <p className="text-[#ADDB87] pl-12">"Python / Django",</p>
+                <p className="text-[#ADDB87] pl-12">"GCP &amp; PostgreSQL",</p>
+                <p className="text-[#ADDB87] pl-12">"Administración de Redes (Ruijie/Reyee)",</p>
+                <p className="text-[#ADDB87] pl-12">"Sistemas Clínicos (Dentalink/Medilink)",</p>
+                <p className="text-[#ADDB87] pl-12">"Integraciones con IA Generativa"</p>
+                <p className="text-white pl-6">],</p>
+                <p className="text-white pl-6">intereses: [<span className="text-[#ECC48D]">"Software"</span>, <span className="text-[#ECC48D]">"Música"</span>, <span className="text-[#ECC48D]">"Cocina"</span>]</p>
+                <p className="text-white">&#125;;</p>
+                
+                <div className="mt-6 border-t border-dark_border border-opacity-10 pt-4 font-mono text-14">
+                  <p className="text-[#C792EA]">$ python sync_dentalink_api.py</p>
+                  <p className="text-[#ADDB87]">&gt;&gt;&gt; Conectando con API Dentalink...</p>
+                  <p className="text-[#ADDB87]">&gt;&gt;&gt; Insertando registros en PostgreSQL GCP...</p>
+                  <p className="text-primary">&gt;&gt;&gt; Sincronización Completada con Éxito. [OK]</p>
+                </div>
+              </div>
+              
+              {/* Decorative light blur glows */}
+              <div className="absolute -top-16 -right-16 w-44 h-44 bg-primary bg-opacity-20 rounded-full blur-3xl -z-1"></div>
+              <div className="absolute -bottom-16 -left-16 w-44 h-44 bg-secondary bg-opacity-20 rounded-full blur-3xl -z-1"></div>
             </div>
           </motion.div>
         </div>
+        
         <CardSlider />
       </div>
       <div className="absolute w-50 h-50 bg-gradient-to-bl from-tealGreen from-50% to-charcoalGray to-60% blur-400 rounded-full -top-64 -right-14 -z-1"></div>
-
-      {/* Modals for Buy and Sell */}
-      {isBuying && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div
-            ref={BuyRef}
-            className="relative w-full max-w-md overflow-hidden rounded-lg px-8 pt-14 pb-8 z-999 text-center bg-dark_grey bg-opacity-90 backdrop-blur-md"
-          >
-            <button
-              onClick={() => setIsBuyingOpen(false)}
-              className="absolute top-0 right-0 mr-8 mt-8 dark:invert"
-              aria-label="Close Buy Modal"
-            >
-              <Icon
-                icon="tabler:currency-xrp"
-                className="text-white hover:text-primary text-24 inline-block me-2"
-              />
-            </button>
-            <BuyCrypto />
-          </div>
-        </div>
-      )}
-      {isSelling && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div
-            ref={SellRef}
-            className="relative w-full max-w-md overflow-hidden rounded-lg px-8 pt-14 pb-8 z-999 text-center bg-dark_grey bg-opacity-90 backdrop-blur-md"
-          >
-            <button
-              onClick={() => setIsSellingOpen(false)}
-              className="absolute top-0 right-0 mr-8 mt-8 dark:invert"
-              aria-label="Close Sell Modal"
-            >
-              <Icon
-                icon="tabler:currency-xrp"
-                className="text-white hover:text-primary text-24 inline-block me-2"
-              />
-            </button>
-            <SellCrypto />
-          </div>
-        </div>
-      )}
     </section>
   );
 };

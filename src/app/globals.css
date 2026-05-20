@@ -6,8 +6,26 @@ html {
   scroll-behavior: smooth;
 }
 
-section{
-  @apply bg-darkmode;
+section {
+  background-color: #F5F7FA;
+  color: #263238;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark section {
+  background-color: #000510;
+  color: #ffffff;
+}
+
+body {
+  background-color: #ffffff;
+  color: #263238;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+  background-color: #000510;
+  color: #ffffff;
 }
 
 .blog-details p, .blog-details hr {

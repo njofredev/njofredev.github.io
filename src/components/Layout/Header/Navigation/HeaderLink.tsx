@@ -24,8 +24,8 @@ const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
     >
       <Link
         href={item.href}
-        className={`text-17 flex font-medium hover:text-primary capitalized  ${
-          path === item.href ? "text-primary " : " text-muted "
+        className={`text-17 flex font-medium hover:text-primary capitalized transition-colors duration-300 ${
+          path === item.href ? "text-primary " : " text-charcoalGray dark:text-muted "
         }`}
       >
         {item.label}
@@ -49,7 +49,7 @@ const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
       </Link>
       {submenuOpen && (
         <div
-          className={`absolute py-2 left-0 mt-0.5 w-60 bg-white dark:bg-darklight dark:text-white shadow-lg rounded-lg `}
+          className={`absolute py-2 left-0 mt-0.5 w-60 bg-white dark:bg-darkmode dark:text-white shadow-lg rounded-lg border border-border dark:border-dark_border dark:border-opacity-10`}
           data-aos="fade-up"
           data-aos-duration="500"
         >
@@ -57,10 +57,10 @@ const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
             <Link
               key={index}
               href={subItem.href}
-              className={`block px-4 py-2   ${
+              className={`block px-4 py-2 transition-colors duration-200 ${
                 path === subItem.href
-                  ? "bg-primary text-white"
-                  : "text-black dark:text-white hover:bg-primary"
+                  ? "bg-primary text-darkmode font-medium"
+                  : "text-midnight_text dark:text-white hover:bg-primary hover:text-darkmode"
               }`}
             >
               {subItem.label}

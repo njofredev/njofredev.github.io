@@ -2,8 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { pricedeta } from "@/app/api/data";
-import Image from "next/image";
-import { getImagePrefix } from "@/utils/utils";
+import { Icon } from "@iconify/react";
 
 const CardSlider = () => {
   const settings = {
@@ -11,8 +10,8 @@ const CardSlider = () => {
     dots: false,
     arrows: false,
     infinite: true,
-    autoplaySpeed: 1500,
-    speed: 300,
+    autoplaySpeed: 2000,
+    speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
     cssEase: "ease-in-out",
@@ -24,7 +23,7 @@ const CardSlider = () => {
         },
       },
       {
-        breakpoint: 992,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
         },
@@ -32,41 +31,53 @@ const CardSlider = () => {
       {
         breakpoint: 1024,
         settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
           slidesToShow: 4,
         },
       },
     ],
   };
+
   return (
-    <div className="lg:-mt-16 mt-16">
+    <div className="lg:-mt-4 mt-16 pb-12">
       <Slider {...settings}>
         {pricedeta.map((item, index) => (
           <div key={index} className="pr-6">
-            <div className="px-5 py-6 bg-dark_grey bg-opacity-80 rounded-xl">
+            <div className="px-5 py-6 bg-dark_grey bg-opacity-60 backdrop-blur-md border border-dark_border border-opacity-5 rounded-xl hover:border-primary hover:border-opacity-35 transition-all duration-300 group">
               <div className="flex items-center gap-5">
                 <div
-                  className={`${item.background} ${item.padding} rounded-full`}
+                  className={`bg-[#0c372a] bg-opacity-35 p-3 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300`}
                 >
-                  <Image
-                    src= {`${getImagePrefix()}${item.icon}`}
-                    alt="icon"
-                    width={item.width}
-                    height={item.height}
+                  <Icon
+                    icon={item.icon}
+                    className="w-9 h-9"
                   />
                 </div>
-                <p className="text-white text-xs font-normal ">
-                  <span className="text-16 font-bold mr-2">{item.title}</span>
-                  {item.short}
-                </p>
+                <div>
+                  <p className="text-white text-16 font-bold mb-0 group-hover:text-primary transition-colors duration-300">
+                    {item.title}
+                  </p>
+                  <span className="text-muted text-opacity-50 text-13 font-normal">
+                    {item.short}
+                  </span>
+                </div>
               </div>
-              <div className="flex justify-between mt-7">
-                <div className="">
-                  <p className="text-16 font-bold text-white mb-0 leading-none">
+              
+              <div className="flex justify-between items-center mt-6">
+                <div>
+                  <p className="text-14 font-medium text-white mb-0 leading-none">
                     {item.price}
                   </p>
                 </div>
-                <div className="">
-                  <span className="text-error text-xs">{item.mark}</span>
+                <div>
+                  <span className="bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-2 py-0.5 rounded text-12 font-medium">
+                    {item.mark}
+                  </span>
                 </div>
               </div>
             </div>

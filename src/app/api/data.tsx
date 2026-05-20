@@ -1,10 +1,9 @@
-import { title } from "process";
+import { HeaderItem } from "@/types/menu";
 
 export const footerlabels: { label: string; herf: string }[] = [
-  { label: "Terms", herf: "#" },
-  { label: "Disclosures", herf: "#" },
-  { label: "Disclosures", herf: "#" },
-  { label: "Latest News", herf: "#" },
+  { label: "GitHub", herf: "https://github.com/njofredev" },
+  { label: "Email", herf: "mailto:n.jofreandrade@gmail.com" },
+  { label: "Descargar CV", herf: "/scrap/jofrenicolascurriculum2026.pdf" },
 ];
 
 export const pricedeta: {
@@ -19,93 +18,118 @@ export const pricedeta: {
   padding: string;
 }[] = [
   {
-    title: "Bitcoin",
-    short: "BTC/USD",
-    icon: "/images/icons/icon-bitcoin.svg",
-    background: "bg-warning bg-opacity-20",
-    price: "$93,291.24",
-    mark: "$94,040.99 (-0.9%)",
-    width: 18,
-    height: 23,
-    padding: "px-4 py-3",
+    title: "Python",
+    short: "Backend",
+    icon: "logos:python",
+    background: "bg-warning bg-opacity-10",
+    price: "Django & APIs",
+    mark: "Avanzado",
+    width: 36,
+    height: 36,
+    padding: "px-3 py-3",
   },
   {
-    title: "Ethereum",
-    short: "ETH/USD",
-    icon: "/images/icons/icon-ethereum.svg",
+    title: "Postgres",
+    short: "Base de Datos",
+    icon: "logos:postgresql",
     background: "bg-light_grey",
-    price: "$3,128.84",
-    mark: "$4,878.26 (-35.9%)",
-    width: 18,
-    height: 23,
-    padding: "px-4 py-2",
+    price: "Modelado & SQL",
+    mark: "Avanzado",
+    width: 36,
+    height: 36,
+    padding: "px-3 py-3",
   },
   {
-    title: "Bitcoin Cash ",
-    short: "BTC/USD",
-    icon: "/images/icons/icon-bitcoin-circle.svg",
-    background: "bg-warning bg-opacity-20",
-    price: "$443.27",
-    mark: "$3,785.82 (-88.3%)",
-    width: 46,
-    height: 46,
-    padding: "px-0 py-0",
+    title: "Next.js",
+    short: "Frontend",
+    icon: "logos:nextjs-icon",
+    background: "bg-light_grey bg-opacity-20",
+    price: "React & TS",
+    mark: "Intermedio",
+    width: 36,
+    height: 36,
+    padding: "px-3 py-3",
   },
   {
-    title: "Litecoin",
-    short: "LTC/USD",
-    icon: "/images/icons/icon-litecoin.svg",
+    title: "GCP (Cloud)",
+    short: "Cloud",
+    icon: "logos:google-cloud",
+    background: "bg-warning bg-opacity-10",
+    price: "GCP Services",
+    mark: "Intermedio",
+    width: 36,
+    height: 36,
+    padding: "px-3 py-3",
+  },
+  {
+    title: "Linux VPS",
+    short: "Infraestructura",
+    icon: "logos:linux-tux",
     background: "bg-light_grey",
-    price: "$86.11",
-    mark: "$410.26 (-79.1%)",
-    width: 18,
-    height: 23,
-    padding: "px-4 py-3",
+    price: "SysAdmin & Redes",
+    mark: "Avanzado",
+    width: 36,
+    height: 36,
+    padding: "px-3 py-3",
   },
   {
-    title: "Solana",
-    short: "SOL/USD",
-    icon: "/images/icons/icon-solana.svg",
-    background: "bg-light_grey",
-    price: "$238.70",
-    mark: "$259.96 (-8.2%)",
-    width: 24,
-    height: 24,
-    padding: "px-4 py-3",
+    title: "Make (API)",
+    short: "Automatización",
+    icon: "logos:make",
+    background: "bg-light_grey bg-opacity-10",
+    price: "Flujos No-Code",
+    mark: "Avanzado",
+    width: 36,
+    height: 36,
+    padding: "px-3 py-3",
   },
   {
-    title: "Dogecoin",
-    short: "DOGE/USD",
-    icon: "/images/icons/icon-dogecoin.svg",
+    title: "Coolify",
+    short: "DevOps",
+    icon: "logos:coolify",
+    background: "bg-warning bg-opacity-10",
+    price: "Self-Hosting",
+    mark: "Intermedio",
+    width: 36,
+    height: 36,
+    padding: "px-3 py-3",
+  },
+  {
+    title: "Git / GitHub",
+    short: "Control Versiones",
+    icon: "logos:git-icon",
     background: "bg-light_grey",
-    price: "$0.394",
-    mark: "$0.7316 (-46.2%)",
-    width: 46,
-    height: 46,
-    padding: "px-0 py-0",
+    price: "CI/CD & Code",
+    mark: "Avanzado",
+    width: 36,
+    height: 36,
+    padding: "px-3 py-3",
   },
 ];
 
-export const portfolioData: { image: string; title: string }[] = [
+export const portfolioData: { image: string; title: string; desc: string }[] = [
   {
-    image: "/images/portfolio/icon-wallet.svg",
-    title: "Manage your portfolio",
+    image: "tabler:api-app",
+    title: "Integración de APIs y GCP",
+    desc: "Desarrollo en Python para el consumo de la API de Dentalink y Medilink, consolidando datos clínicos en PostgreSQL alojado en Google Cloud Platform.",
   },
   {
-    image: "/images/portfolio/icon-vault.svg",
-    title: "Vault protection",
+    image: "tabler:building-hospital",
+    title: "Infraestructura de Sucursales",
+    desc: "Establecimiento del departamento de TI para la nueva Sucursal Vitacura del Policlínico Tabancura, integrando procesos de redes con casa matriz.",
   },
   {
-    image: "/images/portfolio/icon-mobileapp.svg",
-    title: "Mobile apps",
+    image: "tabler:brain",
+    title: "Automatización y Adopción de IA",
+    desc: "Instrucción y aplicación de IA generativa para agilizar procesos de documentación y toma de decisiones, logrando mayor productividad diaria en equipos de salud.",
   },
 ];
 
 export const upgradeData: { title: string }[] = [
-  { title: "100% Secure" },
-  { title: "A Fraction of the Cost" },
-  { title: "More Durable" },
-  { title: "Easier to Use" },
+  { title: "Seguridad y ANCI" },
+  { title: "Eficiencia y Automatización" },
+  { title: "Redes y Telefonía VoIP" },
+  { title: "Gestión de Bodega y Notion" },
 ];
 
 export const perksData: {
@@ -115,21 +139,21 @@ export const perksData: {
   space: string;
 }[] = [
   {
-    icon: "/images/perks/icon-support.svg",
-    title: "24/7 Support",
-    text: "Need help? Get your requests solved quickly via support team.",
+    icon: "tabler:school",
+    title: "Ingeniería Informática",
+    text: "Ingeniero de Ejecución en Informática con Mención en desarrollo de sistemas.<br /><strong>Instituto Profesional AIEP</strong> (2015 - 2021).",
     space: "lg:mt-8",
   },
   {
-    icon: "/images/perks/icon-community.svg",
-    title: "Community",
-    text: "Join the conversations on our worldwide OKEx communities",
+    icon: "tabler:code",
+    title: "Desarrollo Python Django",
+    text: "Especialización como Desarrollador Full-stack Python Django.<br /><strong>Talento Digital - SENCE</strong> (2024 - 460 horas presenciales).",
     space: "lg:mt-14",
   },
   {
-    icon: "/images/perks/icon-academy.svg",
-    title: "Academy",
-    text: "Learn blockchain and<br /> crypto for free.",
+    icon: "tabler:music",
+    title: "Educación Creativa",
+    text: "Estudios de Pedagogía en Música en <strong>U. Alberto Hurtado</strong>. Combina pensamiento lógico de ingeniería con mentalidad creativa e innovadora.",
     space: "lg:mt-4",
   },
 ];
@@ -137,38 +161,59 @@ export const perksData: {
 export const timelineData: {
   icon: string;
   title: string;
+  company: string;
+  period: string;
   text: string;
-  position: string;
+  achievements: string[];
 }[] = [
   {
-    icon: "/images/timeline/icon-planning.svg",
-    title: "Planning",
-    text: "Map the project's scope and architecture",
-    position: "md:top-0 md:left-0",
+    icon: "tabler:device-laptop",
+    title: "Encargado de TI",
+    company: "Policlínico Tabancura",
+    period: "Agosto 2024 - Actualidad",
+    text: "Liderazgo de recursos tecnológicos en entornos de salud y tecnología.",
+    achievements: [
+      "Supervisión de sistemas clínicos en la nube (Dentalink, Medilink, Nubox).",
+      "Establecimiento del departamento TI en la sucursal de Vitacura.",
+      "Desarrollo con Python para sincronizar APIs médicas con PostgreSQL en GCP.",
+      "Migración de sitio web institucional y administración en cPanel."
+    ]
   },
   {
-    icon: "/images/timeline/icon-refinement.svg",
-    title: "Refinement",
-    text: "Refine and improve your solution",
-    position: "md:top-0 md:right-0",
+    icon: "tabler:shield-check",
+    title: "Asistente de Administración",
+    company: "Colegio San Lorenzo",
+    period: "Abril 2022 - Agosto 2023",
+    text: "Gestión administrativa y tecnológica enfocada al sector educativo.",
+    achievements: [
+      "Apoyo en la implementación técnica de la carrera de programación junto a Coding Dojo.",
+      "Diseño y despliegue de sistemas de automatización con Excel para diversas áreas del colegio.",
+      "Digitalización de información clave y levantamiento de requerimientos."
+    ]
   },
   {
-    icon: "/images/timeline/icon-prototype.svg",
-    title: "Prototype",
-    text: "Build a working prototype to test your product",
-    position: "md:bottom-0 md:left-0",
+    icon: "tabler:router",
+    title: "Asistente de Soporte y Telecomunicaciones",
+    company: "Colegio San Lorenzo",
+    period: "Febrero 2022 - Abril 2022",
+    text: "Soporte de infraestructura física, redes y hardware de comunicaciones.",
+    achievements: [
+      "Administración y soporte de redes de internet, modems y racks de comunicaciones.",
+      "Mantenimiento correctivo y preventivo de hardware y salas de computación.",
+      "Implementación ágil de soluciones técnicas eficientes."
+    ]
   },
   {
-    icon: "/images/timeline/icon-support.svg",
-    title: "Support",
-    text: "Deploy the product and ensure full support by us",
-    position: "md:bottom-0 md:right-0",
-  },
+    icon: "tabler:world-upload",
+    title: "Desarrollador Freelance",
+    company: "Servicios Independientes",
+    period: "Enero 2015 - Actualidad",
+    text: "Implementación de soluciones de redes, hardware y desarrollo web.",
+    achievements: [
+      "Desarrollo de proyectos web personalizados para clientes locales.",
+      "Instalación de sistemas operativos, formateo y mantenimiento de redes residenciales y cibers."
+    ]
+  }
 ];
 
-export const CryptoData: { name: string; price: number }[] = [
-  { name: "Bitcoin BTC/USD", price: 67646.84 },
-  { name: "Ethereum ETH/USD", price: 2515.93 },
-  { name: "Bitcoin Cash BTC/USD", price: 366.96 },
-  { name: "Litecoin LTC/USD", price: 61504.54 },
-];
+export const CryptoData: { name: string; price: number }[] = [];
