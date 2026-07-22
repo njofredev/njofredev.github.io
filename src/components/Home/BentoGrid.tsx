@@ -239,25 +239,21 @@ export default function BentoGrid() {
                 </div>
               </div>
 
-              {/* Technologies List Grid: Redesigned as compact 2-column tag-mosaic to provide clean spacing */}
-              <div className="grid grid-cols-2 gap-2.5 sm:gap-3">
+              {/* Technologies List Grid */}
+              <div className="grid grid-cols-2 gap-2.5">
                 {pricedeta.map((tech, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center gap-2.5 p-2.5 sm:p-3 rounded-2xl bg-grey dark:bg-black/25 border border-border/40 dark:border-dark_border/5 hover:border-tealGreen/30 dark:hover:border-primary/20 hover:bg-white dark:hover:bg-black/50 transition-all duration-300 group"
+                    className="flex items-center gap-2 p-2.5 rounded-2xl bg-grey dark:bg-black/25 border border-border/40 dark:border-dark_border/5 hover:border-tealGreen/40 dark:hover:border-primary/30 hover:bg-white dark:hover:bg-black/50 transition-all duration-300 group min-w-0"
                   >
-                    <div className="p-1.5 sm:p-2 bg-white dark:bg-dark_grey border border-border/50 dark:border-dark_border/10 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      <Icon icon={tech.icon} className="text-20 sm:text-24 shrink-0" />
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 bg-white dark:bg-dark_grey border border-border/50 dark:border-dark_border/10 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+                      <Icon icon={tech.icon || "tabler:code"} className="text-20 sm:text-22 shrink-0" />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <h4 className="text-11 sm:text-13 font-bold text-midnight_text dark:text-white font-sans leading-tight break-words" title={tech.title}>
+                      <h4 className="text-11 sm:text-12 font-bold text-midnight_text dark:text-white font-sans leading-tight truncate" title={tech.title}>
                         {tech.title}
                       </h4>
-                      <span className={`text-9 font-mono font-bold uppercase block mt-0.5 ${
-                        tech.mark === "Avanzado" 
-                          ? "text-tealGreen dark:text-primary" 
-                          : "text-secondary"
-                      }`}>
+                      <span className="text-9 font-mono font-bold uppercase block mt-0.5 text-tealGreen dark:text-primary">
                         {tech.mark}
                       </span>
                     </div>

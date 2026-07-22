@@ -64,7 +64,7 @@ export const pricedeta: {
   {
     title: "Redes & VoIP",
     short: "Telecomunicaciones",
-    icon: "logos:connect",
+    icon: "tabler:router",
     background: "bg-warning bg-opacity-10",
     price: "Ruijie & Reyee",
     mark: "Avanzado",
@@ -75,7 +75,7 @@ export const pricedeta: {
   {
     title: "Make & n8n",
     short: "Automatización",
-    icon: "logos:make",
+    icon: "tabler:bolt",
     background: "bg-light_grey bg-opacity-10",
     price: "Workflows & APIs",
     mark: "Avanzado",
@@ -97,7 +97,7 @@ export const pricedeta: {
   {
     title: "IA Generativa",
     short: "Productividad",
-    icon: "logos:google-gemini",
+    icon: "tabler:sparkles",
     background: "bg-light_grey",
     price: "Gemini / Claude",
     mark: "Avanzado",
