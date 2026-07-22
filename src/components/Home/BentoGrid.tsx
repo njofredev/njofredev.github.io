@@ -25,25 +25,25 @@ export default function BentoGrid() {
   };
 
   const aboutJson = `{
-  "nombre": "Nicolás Jofré Andrade",
-  "rol": "Encargado de TI / Backend Dev",
-  "ubicacion": "Santiago, Chile",
-  "educacion": "Ingeniería en Informática",
-  "creativo": "Pedagogía en Música UAH",
-  "intereses": ["Cloud Computing", "AI Integrations", "Sysadmin"]
+  "nombre": "Nicolás Alonso Jofré Andrade",
+  "rol": "Ingeniero en Informática | Operaciones TIC",
+  "ubicacion": "Conchalí, Santiago, Chile",
+  "educacion": "Ingeniería de Ejecución en Informática (AIEP)",
+  "especializacion": "Bootcamp Full-Stack Python & Django (SENCE)",
+  "intereses": ["GCP Cloud", "Integración APIs", "Redes Ruijie/Reyee", "IA Generativa"]
 }`;
 
   const skillsJson = `{
-  "backend": ["Python", "Django", "REST APIs"],
-  "databases": ["PostgreSQL", "GCP SQL", "Modeling"],
-  "cloud_ops": ["GCP", "Docker", "Coolify VPS", "cPanel"],
-  "automation": ["Make.com (Integromat)", "Zapier", "Notion API"],
-  "networking": ["Ruijie/Reyee", "VoIP", "Hardware Racks"]
+  "infraestructura_cloud": ["GCP", "PostgreSQL", "Docker", "Coolify", "VPS Linux", "Ubuntu Server"],
+  "desarrollo_backend": ["Next.js", "Python", "Django", "APIs RESTful", "JavaScript"],
+  "redes_y_soporte": ["Telefonía VoIP", "Redes Ruijie & Reyee", "Hardware Racks"],
+  "automatizacion_e_ia": ["Make", "n8n", "Ecosistema Google (Antigravity, Gemini)", "Claude Code"]
 }`;
 
   const contactJson = `{
   "email": "n.jofreandrade@gmail.com",
-  "github": "github.com/njofredev",
+  "web": "njofredev.github.io",
+  "linkedin": "linkedin.com/in/njofreandrade",
   "telefono": "+56 9 5755 8966",
   "disponibilidad": "Inmediata"
 }`;
@@ -55,19 +55,19 @@ export default function BentoGrid() {
   };
 
   return (
-    <section className="pt-40 pb-24 lg:pt-48 lg:pb-32 bg-grey dark:bg-darkmode transition-colors duration-500" id="main-banner">
+    <section className="pt-28 pb-20 lg:pt-32 lg:pb-28 bg-grey dark:bg-darkmode transition-colors duration-500" id="main-banner">
       <div className="container mx-auto lg:max-w-screen-xl px-4 sm:px-6">
         
         {/* Bento Grid Header Title */}
-        <div className="mb-16 lg:mb-20 text-center max-w-2xl mx-auto">
-          <span className="text-14 font-mono text-tealGreen dark:text-primary font-bold uppercase tracking-widest bg-tealGreen/10 dark:bg-primary/10 px-3 py-1 rounded-full">
+        <div className="mb-10 lg:mb-12 text-center max-w-3xl mx-auto">
+          <span className="text-13 sm:text-14 font-mono text-tealGreen dark:text-primary font-bold uppercase tracking-widest bg-tealGreen/10 dark:bg-primary/10 px-3.5 py-1.5 rounded-full inline-block">
             PORTAFOLIO PROFESIONAL
           </span>
-          <h1 className="mt-4 text-36 sm:text-54 font-bold text-midnight_text dark:text-white tracking-tight">
+          <h1 className="mt-3 text-36 sm:text-54 lg:text-70 font-bold text-midnight_text dark:text-white tracking-tight leading-tight">
             Nicolás <span className="text-tealGreen dark:text-primary">Jofré Andrade</span>
           </h1>
-          <p className="mt-4 text-16 sm:text-18 text-charcoalGray dark:text-muted/80 leading-relaxed font-sans">
-            Soluciones robustas que unen desarrollo de software, infraestructura cloud, telecomunicaciones corporativas y automatizaciones inteligentes.
+          <p className="mt-3 text-16 sm:text-18 text-charcoalGray dark:text-muted/80 leading-relaxed font-sans max-w-2xl mx-auto">
+            Ingeniero en Informática especializado en Operaciones TIC, infraestructura en la nube, automatizaciones y desarrollo backend.
           </p>
         </div>
 
@@ -84,11 +84,11 @@ export default function BentoGrid() {
                 </span>
               </div>
               <h2 className="text-28 sm:text-36 font-bold text-midnight_text dark:text-white leading-tight font-sans tracking-tight">
-                Backend Developer &amp; <br />
-                <span className="text-tealGreen dark:text-primary">Administrador de Infraestructura TI</span>
+                Ingeniero en Informática &amp; <br />
+                <span className="text-tealGreen dark:text-primary">Líder de Operaciones TIC</span>
               </h2>
               <p className="mt-4 text-16 text-charcoalGray dark:text-muted/70 leading-relaxed max-w-xl">
-                Soy Ingeniero en Informática especializado en entornos híbridos y de salud. Automatizo procesos de negocio, gestiono redes empresariales complejas y diseño arquitecturas en la nube que optimizan costos y aceleran operaciones diariamente.
+                Más de 4 años de experiencia liderando infraestructura TIC, automatización de procesos y despliegue de soluciones en la nube para entornos de salud, educación y administración. Especialista en integración de datos clínicos vía API, redes corporativas y adopción de IA generativa.
               </p>
             </div>
 

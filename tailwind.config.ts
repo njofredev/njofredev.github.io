@@ -46,7 +46,7 @@ const config: Config = {
         '999': '999'
       },
       colors: {
-        primary: "#99E39E",
+        primary: "#3B82F6",
         secondary: "#1DC8CD",
         midnight_text: "#263238",
         muted: "#d8dbdb",
@@ -61,7 +61,7 @@ const config: Config = {
         darkmode: "#000510",
         darklight: "#0c372a",
         dark_border: "#959595",
-        tealGreen : "#477E70",
+        tealGreen: "#2563EB",
         charcoalGray: "#666C78",
         deepSlate: "#282C36",
         slateGray: "#2F3543",

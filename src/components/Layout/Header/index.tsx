@@ -105,7 +105,7 @@ const Header: React.FC = () => {
             <a
               href="/scrap/jofrenicolascurriculum2026.pdf"
               download="CV_Nicolas_Jofre.pdf"
-              className="hidden lg:flex items-center gap-2 bg-primary text-darkmode hover:bg-transparent hover:text-primary border border-primary px-4 py-2 rounded-lg font-medium transition-all duration-300"
+              className="hidden lg:flex items-center gap-2 bg-primary text-white hover:bg-transparent hover:text-primary border border-primary px-4 py-2 rounded-lg font-medium transition-all duration-300"
             >
               <Icon icon="tabler:download" className="text-20" />
               Descargar CV
@@ -113,7 +113,7 @@ const Header: React.FC = () => {
             
             <a
               href="mailto:n.jofreandrade@gmail.com"
-              className="hidden lg:flex items-center gap-2 bg-transparent text-primary hover:bg-primary hover:text-darkmode border border-primary px-4 py-2 rounded-lg font-medium transition-all duration-300"
+              className="hidden lg:flex items-center gap-2 bg-transparent text-primary hover:bg-primary hover:text-white border border-primary px-4 py-2 rounded-lg font-medium transition-all duration-300"
             >
               <Icon icon="tabler:mail" className="text-20" />
               Contacto

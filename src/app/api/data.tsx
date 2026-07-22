@@ -18,88 +18,88 @@ export const pricedeta: {
   padding: string;
 }[] = [
   {
-    title: "Python",
+    title: "Python / Django",
     short: "Backend",
     icon: "logos:python",
     background: "bg-warning bg-opacity-10",
-    price: "Django & APIs",
+    price: "APIs RESTful",
     mark: "Avanzado",
     width: 36,
     height: 36,
     padding: "px-3 py-3",
   },
   {
-    title: "Postgres",
+    title: "PostgreSQL & GCP",
     short: "Base de Datos",
     icon: "logos:postgresql",
     background: "bg-light_grey",
-    price: "Modelado & SQL",
+    price: "Google Cloud",
     mark: "Avanzado",
     width: 36,
     height: 36,
     padding: "px-3 py-3",
   },
   {
-    title: "Next.js",
+    title: "Next.js / React",
     short: "Frontend",
     icon: "logos:nextjs-icon",
     background: "bg-light_grey bg-opacity-20",
-    price: "React & TS",
-    mark: "Intermedio",
+    price: "TypeScript",
+    mark: "Avanzado",
     width: 36,
     height: 36,
     padding: "px-3 py-3",
   },
   {
-    title: "GCP (Cloud)",
-    short: "Cloud",
-    icon: "logos:google-cloud",
-    background: "bg-warning bg-opacity-10",
-    price: "GCP Services",
-    mark: "Intermedio",
-    width: 36,
-    height: 36,
-    padding: "px-3 py-3",
-  },
-  {
-    title: "Linux VPS",
+    title: "VPS Linux & Docker",
     short: "Infraestructura",
     icon: "logos:linux-tux",
     background: "bg-light_grey",
-    price: "SysAdmin & Redes",
+    price: "Ubuntu Server",
     mark: "Avanzado",
     width: 36,
     height: 36,
     padding: "px-3 py-3",
   },
   {
-    title: "Make (API)",
+    title: "Redes & VoIP",
+    short: "Telecomunicaciones",
+    icon: "logos:connect",
+    background: "bg-warning bg-opacity-10",
+    price: "Ruijie & Reyee",
+    mark: "Avanzado",
+    width: 36,
+    height: 36,
+    padding: "px-3 py-3",
+  },
+  {
+    title: "Make & n8n",
     short: "Automatización",
     icon: "logos:make",
     background: "bg-light_grey bg-opacity-10",
-    price: "Flujos No-Code",
+    price: "Workflows & APIs",
     mark: "Avanzado",
     width: 36,
     height: 36,
     padding: "px-3 py-3",
   },
   {
-    title: "Coolify",
+    title: "Coolify & cPanel",
     short: "DevOps",
     icon: "logos:coolify",
     background: "bg-warning bg-opacity-10",
     price: "Self-Hosting",
-    mark: "Intermedio",
+    mark: "Avanzado",
     width: 36,
     height: 36,
     padding: "px-3 py-3",
   },
   {
-    title: "Git / GitHub",
-    short: "Control Versiones",
-    icon: "logos:git-icon",
+    title: "IA Generativa",
+    short: "Productividad",
+    icon: "logos:google-gemini",
     background: "bg-light_grey",
-    price: "CI/CD & Code",
+    price: "Gemini / Claude",
     mark: "Avanzado",
     width: 36,
     height: 36,
@@ -110,26 +110,26 @@ export const pricedeta: {
 export const portfolioData: { image: string; title: string; desc: string }[] = [
   {
     image: "tabler:api-app",
-    title: "Integración de APIs y GCP",
-    desc: "Desarrollo en Python para el consumo de la API de Dentalink y Medilink, consolidando datos clínicos en PostgreSQL alojado en Google Cloud Platform.",
+    title: "Integración de Datos y APIs Médicas",
+    desc: "Desarrollo de scripts en Python y JavaScript para consumo de APIs de sistemas clínicos (Dentalink y Medilink) hacia PostgreSQL en GCP y servidores self-hosted.",
   },
   {
     image: "tabler:building-hospital",
-    title: "Infraestructura de Sucursales",
-    desc: "Establecimiento del departamento de TI para la nueva Sucursal Vitacura del Policlínico Tabancura, integrando procesos de redes con casa matriz.",
+    title: "Estructuración de Departamento TIC",
+    desc: "Diseño e implementación de arquitectura de TI, redes (Ruijie/Reyee) y telefonía VoIP para la nueva sucursal Vitacura de Policlínico Tabancura, integrando con casa matriz.",
   },
   {
     image: "tabler:brain",
-    title: "Automatización y Adopción de IA",
-    desc: "Instrucción y aplicación de IA generativa para agilizar procesos de documentación y toma de decisiones, logrando mayor productividad diaria en equipos de salud.",
+    title: "Adopción de IA & Transformación Digital",
+    desc: "Capacitación en IA generativa (Gemini, Claude, Antigravity) para optimización de tareas clínicas/administrativas, además de desarrollo de cotizador de exámenes e inventarios cloud en Next.js.",
   },
 ];
 
 export const upgradeData: { title: string }[] = [
-  { title: "Seguridad y ANCI" },
-  { title: "Eficiencia y Automatización" },
-  { title: "Redes y Telefonía VoIP" },
-  { title: "Gestión de Bodega y Notion" },
+  { title: "Seguridad ANCI y Ley Nº21.719" },
+  { title: "Automatizaciones Python, Make & n8n" },
+  { title: "Redes Ruijie & Telefonía VoIP" },
+  { title: "Sistemas Web Next.js & GCP Cloud" },
 ];
 
 export const perksData: {
@@ -141,19 +141,19 @@ export const perksData: {
   {
     icon: "tabler:school",
     title: "Ingeniería Informática",
-    text: "Ingeniero de Ejecución en Informática con Mención en desarrollo de sistemas.<br /><strong>Instituto Profesional AIEP</strong> (2015 - 2021).",
+    text: "Ingeniero de Ejecución en Informática (Mención Desarrollo de Sistemas).<br /><strong>Instituto Profesional AIEP</strong> (2015 - 2021).",
     space: "lg:mt-8",
   },
   {
     icon: "tabler:code",
-    title: "Desarrollo Python Django",
-    text: "Especialización como Desarrollador Full-stack Python Django.<br /><strong>Talento Digital - SENCE</strong> (2024 - 460 horas presenciales).",
+    title: "Bootcamp Full-Stack Python",
+    text: "Desarrollador Full-Stack Python & Django.<br /><strong>Talento Digital - SENCE</strong> (2024 - 460 hrs presenciales).",
     space: "lg:mt-14",
   },
   {
-    icon: "tabler:music",
-    title: "Educación Creativa",
-    text: "Estudios de Pedagogía en Música en <strong>U. Alberto Hurtado</strong>. Combina pensamiento lógico de ingeniería con mentalidad creativa e innovadora.",
+    icon: "tabler:building-community",
+    title: "Enseñanza Media & Administración",
+    text: "Formación en Asistente Administrativo Computacional en <strong>Colegio San Lorenzo e INACAP</strong> (2013).",
     space: "lg:mt-4",
   },
 ];
@@ -168,15 +168,17 @@ export const timelineData: {
 }[] = [
   {
     icon: "tabler:device-laptop",
-    title: "Encargado de TI",
+    title: "Encargado TIC",
     company: "Policlínico Tabancura",
     period: "Agosto 2024 - Actualidad",
-    text: "Liderazgo de recursos tecnológicos en entornos de salud y tecnología.",
+    text: "Liderazgo de infraestructura tecnológica, desarrollo de software y comunicaciones en Vitacura, Santiago.",
     achievements: [
-      "Supervisión de sistemas clínicos en la nube (Dentalink, Medilink, Nubox).",
-      "Establecimiento del departamento TI en la sucursal de Vitacura.",
-      "Desarrollo con Python para sincronizar APIs médicas con PostgreSQL en GCP.",
-      "Migración de sitio web institucional y administración en cPanel."
+      "Estructuración del departamento de TI en sucursal Vitacura e integración con casa matriz.",
+      "Desarrollo en Python/JS para consumo de APIs clínicas (Dentalink/Medilink) a PostgreSQL en GCP.",
+      "Desarrollo de cotizador de exámenes en Next.js, inventario cloud y sistema de derivaciones digitales.",
+      "Despliegue de redes Ruijie/Reyee, telefonía VoIP unificada y servidor Linux.",
+      "Implementación de medidas de seguridad de datos bajo normativa ANCI y Ley Nº21.719.",
+      "Capacitación al personal administrativo y clínico en uso de IA generativa (Gemini, Claude)."
     ]
   },
   {
@@ -184,34 +186,34 @@ export const timelineData: {
     title: "Asistente de Administración",
     company: "Colegio San Lorenzo",
     period: "Abril 2022 - Agosto 2023",
-    text: "Gestión administrativa y tecnológica enfocada al sector educativo.",
+    text: "Gestión técnica, infraestructura académica y automatización de procesos.",
     achievements: [
-      "Apoyo en la implementación técnica de la carrera de programación junto a Coding Dojo.",
-      "Diseño y despliegue de sistemas de automatización con Excel para diversas áreas del colegio.",
-      "Digitalización de información clave y levantamiento de requerimientos."
+      "Comisión técnica de levantamiento de equipamiento (hardware, redes y switches) para la carrera de Programación (Alianza Coding Dojo).",
+      "Sistemas automatizados en Excel para enfermería, operaciones y administración.",
+      "Digitalización de contratos de funcionarios y carpetas digitales para la Dirección del Trabajo."
     ]
   },
   {
     icon: "tabler:router",
-    title: "Asistente de Soporte y Telecomunicaciones",
+    title: "Asistente de Soporte TI & Telecomunicaciones",
     company: "Colegio San Lorenzo",
     period: "Febrero 2022 - Abril 2022",
-    text: "Soporte de infraestructura física, redes y hardware de comunicaciones.",
+    text: "Operatividad de infraestructura física de redes, hardware y servidores de comunicaciones.",
     achievements: [
-      "Administración y soporte de redes de internet, modems y racks de comunicaciones.",
-      "Mantenimiento correctivo y preventivo de hardware y salas de computación.",
-      "Implementación ágil de soluciones técnicas eficientes."
+      "Administración y soporte de redes, racks de comunicaciones, módems e impresoras.",
+      "Mantenimiento de laboratorios de computación, data show y sistemas de audio.",
+      "Continuidad operacional para personal docente y administrativo mediante soporte de respuesta rápida."
     ]
   },
   {
     icon: "tabler:world-upload",
-    title: "Desarrollador Freelance",
+    title: "Consultor TI & Desarrollador Freelance",
     company: "Servicios Independientes",
-    period: "Enero 2015 - Actualidad",
-    text: "Implementación de soluciones de redes, hardware y desarrollo web.",
+    period: "Enero 2014 - Actualidad",
+    text: "Desarrollo web, despliegue en la nube e infraestructura para particulares y PyMEs.",
     achievements: [
-      "Desarrollo de proyectos web personalizados para clientes locales.",
-      "Instalación de sistemas operativos, formateo y mantenimiento de redes residenciales y cibers."
+      "Despliegue de sitios web y aplicaciones en VPS Linux (Coolify, cPanel, Docker).",
+      "Diagnóstico de hardware, mantenimiento de redes LAN/Wi-Fi, CCTV e instalación de sistemas operativos."
     ]
   }
 ];
