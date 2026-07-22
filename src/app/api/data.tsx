@@ -18,7 +18,7 @@ export const pricedeta: {
   padding: string;
 }[] = [
   {
-    title: "Python / Django",
+    title: "Python",
     short: "Backend",
     icon: "logos:python",
     background: "bg-warning bg-opacity-10",
@@ -29,7 +29,7 @@ export const pricedeta: {
     padding: "px-3 py-3",
   },
   {
-    title: "PostgreSQL & GCP",
+    title: "PostgreSQL",
     short: "Base de Datos",
     icon: "logos:postgresql",
     background: "bg-light_grey",
@@ -40,7 +40,7 @@ export const pricedeta: {
     padding: "px-3 py-3",
   },
   {
-    title: "Next.js / React",
+    title: "Next.js",
     short: "Frontend",
     icon: "logos:nextjs-icon",
     background: "bg-light_grey bg-opacity-20",
@@ -51,7 +51,7 @@ export const pricedeta: {
     padding: "px-3 py-3",
   },
   {
-    title: "VPS Linux & Docker",
+    title: "Linux VPS",
     short: "Infraestructura",
     icon: "logos:linux-tux",
     background: "bg-light_grey",
@@ -73,7 +73,7 @@ export const pricedeta: {
     padding: "px-3 py-3",
   },
   {
-    title: "Make & n8n",
+    title: "Make / n8n",
     short: "Automatización",
     icon: "tabler:bolt",
     background: "bg-light_grey bg-opacity-10",
@@ -84,9 +84,9 @@ export const pricedeta: {
     padding: "px-3 py-3",
   },
   {
-    title: "Coolify & cPanel",
+    title: "Coolify",
     short: "DevOps",
-    icon: "logos:coolify",
+    icon: "tabler:server-2",
     background: "bg-warning bg-opacity-10",
     price: "Self-Hosting",
     mark: "Avanzado",
@@ -95,7 +95,7 @@ export const pricedeta: {
     padding: "px-3 py-3",
   },
   {
-    title: "IA Generativa",
+    title: "IA / LLMs",
     short: "Productividad",
     icon: "tabler:sparkles",
     background: "bg-light_grey",

@@ -244,13 +244,13 @@ export default function BentoGrid() {
                 {pricedeta.map((tech, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center gap-2 p-2.5 rounded-2xl bg-grey dark:bg-black/25 border border-border/40 dark:border-dark_border/5 hover:border-tealGreen/40 dark:hover:border-primary/30 hover:bg-white dark:hover:bg-black/50 transition-all duration-300 group min-w-0"
+                    className="flex items-center gap-2.5 p-3 rounded-2xl bg-grey dark:bg-black/25 border border-border/40 dark:border-dark_border/5 hover:border-tealGreen/40 dark:hover:border-primary/30 hover:bg-white dark:hover:bg-black/50 transition-all duration-300 group min-w-0"
                   >
                     <div className="w-9 h-9 sm:w-10 sm:h-10 bg-white dark:bg-dark_grey border border-border/50 dark:border-dark_border/10 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300 overflow-hidden">
                       <Icon icon={tech.icon || "tabler:code"} className="text-20 sm:text-22 shrink-0" />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <h4 className="text-11 sm:text-12 font-bold text-midnight_text dark:text-white font-sans leading-tight truncate" title={tech.title}>
+                      <h4 className="text-12 sm:text-13 font-bold text-midnight_text dark:text-white font-sans leading-snug">
                         {tech.title}
                       </h4>
                       <span className="text-9 font-mono font-bold uppercase block mt-0.5 text-tealGreen dark:text-primary">
