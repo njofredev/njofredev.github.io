@@ -1,25 +1,28 @@
 import React from "react";
+import Link from "next/link";
 import { timelineData, pricedeta, perksData } from "@/app/api/data";
-import { Metadata } from "next";
-import Scrollspy from "@/components/Common/Scrollspy";
 
-export const metadata: Metadata = {
-  title: "Nicolás Jofré | Ingeniero en Informática & Administrador de TI",
-  description: "Portafolio profesional de Nicolás Jofré Andrade. Especialista en desarrollo backend con Python/Django, bases de datos PostgreSQL en GCP, administración de TI, redes e IA.",
-};
-
-const sections = [
-  { id: "sobre-mi", label: "Sobre Mí" },
-  { id: "experiencia", label: "Experiencia" },
-  { id: "educacion", label: "Educación" },
-  { id: "habilidades", label: "Habilidades" },
-];
-
-export default function Home() {
+export default function MinimalPage() {
   return (
-    <main className="min-h-screen bg-white dark:bg-black text-black dark:text-white font-sans py-16 px-6 sm:px-12 md:px-24 transition-colors duration-300">
+    <main className="min-h-screen bg-white dark:bg-black text-black dark:text-white font-serif py-16 px-6 sm:px-12 md:px-24 transition-colors duration-300">
+      {/* Hide global header and footer on this page */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        header.fixed, footer.bg-darkmode, #scroll-to-top {
+          display: none !important;
+        }
+      `}} />
       <div className="max-w-3xl mx-auto">
         
+        {/* Floating return link */}
+        <div className="mb-12 font-sans text-sm no-print">
+          <Link 
+            href="/" 
+            className="text-gray-500 hover:text-black dark:hover:text-white underline transition-colors"
+          >
+            ← Volver al inicio (Bento Grid)
+          </Link>
+        </div>
+
         {/* Header */}
         <header className="mb-12">
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-2">
@@ -46,7 +49,7 @@ export default function Home() {
         </header>
 
         {/* Sobre mí */}
-        <section id="sobre-mi" className="mb-12">
+        <section className="mb-12">
           <h2 className="text-xs sm:text-sm font-sans font-bold uppercase tracking-wider mb-2">
             Sobre mí
           </h2>
@@ -58,52 +61,32 @@ export default function Home() {
         </section>
 
         {/* Experiencia profesional */}
-        <section id="experiencia" className="mb-12">
-          <h2 className="text-xs sm:text-sm font-sans font-bold uppercase tracking-wider mb-6">
+        <section className="mb-12">
+          <h2 className="text-xs sm:text-sm font-sans font-bold uppercase tracking-wider mb-2">
             Experiencia Profesional
           </h2>
-          <div className="relative border-l border-black/20 dark:border-white/15 ml-4 pl-8 space-y-12">
+          <div className="border-t border-black dark:border-white pt-4 space-y-10">
             {timelineData.map((job, idx) => (
-              <div key={idx} className="relative">
-                {/* Timeline Dot */}
-                <span className="absolute -left-[39px] top-1.5 flex size-[14px] items-center justify-center" aria-hidden="true">
-                  {idx === 0 && (
-                    <span className="animate-ping absolute inline-flex size-full rounded-full bg-black/20 dark:bg-white/20"></span>
-                  )}
-                  <span className="relative inline-flex size-[8px] rounded-full bg-black dark:bg-white"></span>
-                </span>
-
-                {/* Stacked Rows Layout */}
-                <div className="space-y-3">
-                  {/* Header Row (Title, Company, and Period) */}
-                  <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 border-b border-gray-100 dark:border-neutral-900 pb-2">
-                    <div className="flex flex-wrap items-baseline gap-2">
-                      <h3 className="text-lg sm:text-xl font-bold text-black dark:text-white">
-                        {job.title}
-                      </h3>
-                      <span className="text-gray-400 dark:text-gray-600 hidden sm:inline">•</span>
-                      <h4 className="font-semibold text-base text-gray-700 dark:text-gray-300">
-                        {job.company}
-                      </h4>
-                    </div>
-                    <time className="text-sm text-gray-500 dark:text-gray-400 font-sans shrink-0">
-                      {job.period}
-                    </time>
-                  </div>
-
-                  {/* Content Row (Description and Bullet Points) */}
-                  <div className="pl-0">
-                    <p className="text-base text-gray-800 dark:text-gray-200 leading-relaxed font-medium">
-                      {job.text}
-                    </p>
-                    <ul className="mt-3 list-disc list-outside pl-4 text-sm sm:text-base space-y-2 text-gray-600 dark:text-gray-400">
-                      {job.achievements.map((ach, aIdx) => (
-                        <li key={aIdx} className="leading-relaxed pl-1">
-                          {ach}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+              <div key={idx} className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8">
+                {/* Left Column: Date Range */}
+                <div className="md:col-span-1 text-sm font-sans text-gray-600 dark:text-gray-400">
+                  {job.period}
+                </div>
+                {/* Right Column: Content */}
+                <div className="md:col-span-3">
+                  <h3 className="text-lg font-bold leading-tight">
+                    {job.title}, <span className="font-normal italic">{job.company}</span>
+                  </h3>
+                  <p className="mt-2 text-sm text-gray-700 dark:text-gray-300 italic">
+                    {job.text}
+                  </p>
+                  <ul className="mt-3 list-disc list-outside pl-4 text-sm sm:text-base space-y-2 text-gray-800 dark:text-gray-200">
+                    {job.achievements.map((ach, aIdx) => (
+                      <li key={aIdx} className="leading-relaxed pl-1">
+                        {ach}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
@@ -111,7 +94,7 @@ export default function Home() {
         </section>
 
         {/* Educación */}
-        <section id="educacion" className="mb-12">
+        <section className="mb-12">
           <h2 className="text-xs sm:text-sm font-sans font-bold uppercase tracking-wider mb-2">
             Educación
           </h2>
@@ -136,7 +119,7 @@ export default function Home() {
         </section>
 
         {/* Habilidades */}
-        <section id="habilidades" className="mb-16">
+        <section className="mb-16">
           <h2 className="text-xs sm:text-sm font-sans font-bold uppercase tracking-wider mb-2">
             Habilidades
           </h2>
@@ -152,12 +135,11 @@ export default function Home() {
         </section>
 
         {/* Footer info print */}
-        <footer className="text-center font-sans text-xs text-gray-400 mt-20 border-t border-gray-100 dark:border-neutral-900 pt-6">
+        <footer className="text-center font-sans text-xs text-gray-400 mt-20 border-t border-gray-100 dark:border-neutral-900 pt-6 no-print">
           Nicolás Alonso Jofré Andrade • Generado en formato minimalista • {new Date().getFullYear()}
         </footer>
 
       </div>
-      <Scrollspy items={sections} />
     </main>
   );
 }

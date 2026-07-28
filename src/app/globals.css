@@ -4,27 +4,33 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.dark html {
+  background-color: #000510;
 }
 
 section {
-  background-color: #F5F7FA;
+  background-color: transparent;
   color: #263238;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dark section {
-  background-color: #000510;
+  background-color: transparent;
   color: #ffffff;
 }
 
 body {
-  background-color: #ffffff;
+  background-color: transparent;
   color: #263238;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dark body {
-  background-color: #000510;
+  background-color: transparent;
   color: #ffffff;
 }
 

@@ -67,16 +67,14 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed left-0 right-0 z-40 transition-all duration-500 mx-auto px-4 ${
-        sticky
-          ? "top-4 max-w-screen-xl w-[calc(100%-2rem)]"
-          : "top-0 w-full md:pt-8 pt-4 pb-5"
+      className={`fixed left-0 right-0 z-40 transition-all duration-300 mx-auto px-4 w-full max-w-screen-xl ${
+        sticky ? "top-4" : "top-0 pt-4 md:pt-6"
       }`}
     >
       <div className={`transition-all duration-300 ${
         sticky
-          ? "bg-white/80 dark:bg-darkmode/70 backdrop-blur-md border border-border/50 dark:border-dark_border/10 py-3 px-6 rounded-2xl shadow-cause-shadow dark:shadow-none"
-          : "lg:py-0 py-2 bg-transparent"
+          ? "bg-white/80 dark:bg-darkmode/70 backdrop-blur-md border border-border/50 dark:border-white/10 py-3 px-6 rounded-2xl shadow-cause-shadow dark:shadow-none"
+          : "bg-transparent border border-transparent py-4 px-4 rounded-2xl"
       }`}>
         <div className="container mx-auto flex items-center justify-between px-0">
           <Logo />

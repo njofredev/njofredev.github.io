@@ -55,7 +55,7 @@ export default function BentoGrid() {
   };
 
   return (
-    <section className="pt-28 pb-20 lg:pt-32 lg:pb-28 bg-grey dark:bg-darkmode transition-colors duration-500" id="main-banner">
+    <section className="pt-28 pb-20 lg:pt-32 lg:pb-28 bg-transparent transition-colors duration-500" id="main-banner">
       <div className="container mx-auto lg:max-w-screen-xl px-4 sm:px-6">
         
         {/* Bento Grid Header Title */}
@@ -77,10 +77,13 @@ export default function BentoGrid() {
           {/* Card 1: Principal Hero / Bio (col-span-2) */}
           <div className="col-span-1 md:col-span-2 lg:col-span-2 flex flex-col justify-between bg-white dark:bg-dark_grey border border-border dark:border-dark_border dark:border-opacity-5 p-8 rounded-3xl shadow-cause-shadow hover:shadow-lg transition-all duration-300 relative overflow-hidden group">
             <div>
-              <div className="flex items-center gap-2 mb-6">
-                <span className="w-3.5 h-3.5 bg-success rounded-full animate-pulse"></span>
-                <span className="text-12 font-mono font-bold text-success uppercase tracking-wider">
-                  Disponible para proyectos TI &amp; Consultoría
+              <div className="flex items-center mb-6">
+                <span className="relative inline-flex overflow-hidden rounded-full p-[1px]">
+                  <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#38BDF8_0%,#0284C7_50%,#38BDF8_100%)]"></span>
+                  <div className="inline-flex items-center justify-center w-full px-3 py-1 text-11 sm:text-12 font-mono font-bold text-sky-800 bg-sky-50 dark:bg-[#1E2229] dark:text-white/80 rounded-full backdrop-blur-3xl whitespace-nowrap">
+                    <span className="w-2 h-2 mr-2 bg-success rounded-full animate-pulse"></span>
+                    Disponible para proyectos TI &amp; Consultoría
+                  </div>
                 </span>
               </div>
               <h2 className="text-28 sm:text-36 font-bold text-midnight_text dark:text-white leading-tight font-sans tracking-tight">
