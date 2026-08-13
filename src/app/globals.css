@@ -4,33 +4,54 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #ffffff;
-  transition: background-color 0.3s ease;
+  background-color: #000000;
 }
 
 .dark html {
-  background-color: #000510;
+  background-color: #000000;
+}
+
+/* Smooth theme transition for structural and text elements */
+html,
+body,
+.fixed,
+main,
+section,
+h1, h2, h3, h4, h5, h6,
+p,
+a,
+span,
+li,
+svg {
+  transition: background-color 500ms ease-in-out,
+              color 500ms ease-in-out,
+              border-color 500ms ease-in-out,
+              text-decoration-color 500ms ease-in-out,
+              opacity 500ms ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html, body, .fixed, main, section, h1, h2, h3, h4, h5, h6, p, a, span, li, svg {
+    transition: none !important;
+    animation: none !important;
+  }
 }
 
 section {
   background-color: transparent;
-  color: #263238;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dark section {
   background-color: transparent;
-  color: #ffffff;
 }
 
 body {
-  background-color: transparent;
-  color: #263238;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .dark body {
-  background-color: transparent;
+  background-color: #000000;
   color: #ffffff;
 }
 

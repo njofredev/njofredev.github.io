@@ -17,11 +17,12 @@ export default function RootLayout({
       <body className={`${font.className}`}>
         <ThemeProvider
           attribute="class"
-          enableSystem={true}
-          defaultTheme="system"
+          enableSystem={false}
+          defaultTheme="dark"
+          forcedTheme="dark"
+          disableTransitionOnChange={false}
         >
-          {/* Minimalist Black & White Background */}
-          <div className="fixed inset-0 z-[-2] bg-white dark:bg-black"></div>
+
           {/* Grain texture overlay */}
           <div className="pointer-events-none fixed inset-0 z-[-1] opacity-[0.025] dark:opacity-[0.04]" style={{ backgroundImage: "url('/noise.svg')", backgroundSize: "200px 200px" }} aria-hidden="true"></div>
           
